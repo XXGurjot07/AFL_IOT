@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Live Inference - AFL Monitoring</title>
+{% endblock %} 
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <h2 class="mt-5">Live Inference - AFL Monitoring</h2>
+            <form method="post" action="{{ url_for('ir_tasks') }}">
+              <input type="submit" value="Run Model" name="run_model" />
+              <input type="submit" value="Stop Model" name="stop_model" />
+              
+            </form>
+            <br /><br />
+            <form method="post" action="{{ url_for('esp_show') }}">
+              <input type="submit" value="View Location 1" name="sr1" />
+              <input type="submit" value="View Location 2" name="sr2" />
+              <input type="submit" value="View Location 3" name="sr3" />
+              <input type="submit" value="View Location 4" name="sr4" />
+              <input type="submit" value="View Location 5" name="sr5" />
+              <br />
+            </form>
+          </div>
+    <br /><br />
+    </div>
+        <br /><br />
+        <h3 class="mt-5">Latest Fetch at Location</h3>
+        <img src="{{user_image}}" alt="User Image">
+    </div>
+    
+  </div>
+  
+  
+{% endblock %}
+

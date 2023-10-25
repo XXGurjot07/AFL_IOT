@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Auxiliary Sensors - AFL Monitoring</title>
+{% endblock %} {% block body %}
+<div class="container">
+  <div class="col-lg-8 offset-lg-2">
+    <h2 class="mt-5">
+      Auxiliary Sensor Readings - Ambient Temp and Soil Moisture - AFL
+      Monitoring
+    </h2>
+    <div>
+      <form method="post" action="{{ url_for('ar_tasks') }}">
+      <input
+        type="submit"
+        value="Fetch Latest Status"
+        name="fetch-latest-status"
+      />
+      </form>
+    </div>
+  </div>
+  <div>
+    
+    <table class="table table-bordered table-dark">
+      <br />
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Date Added</th>
+            <th scope="col">Soil Moisture</th>
+            <th scope="col">Temperature</th>
+          </tr>
+        </thead>
+        
+        <br /><br />
+
+        <tbody>
+          {% for data in my_data_aux %}
+          <tr>
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.datetime}}</td>
+            <td>{{data.moisture_reading}}</td>
+            <td>{{data.temp_reading}}</td>
+            
+          </tr>
+          {% endfor %}
+          
+        </tbody>
+      </table>
+  </div>
+</div>
+
+{% endblock %}
