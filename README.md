@@ -7,7 +7,7 @@ Prerequesites -
 Steps to Deploy (Python)-
 1. Create Virtual Envoirnment
 2. Install dependencies using requirements.txt
-3. Run app.py flask app.
+3. Run app.py flask app
 The flask webserver will be hosted on the network!
 
 
