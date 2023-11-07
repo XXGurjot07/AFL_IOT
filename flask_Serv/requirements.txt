@@ -136,6 +136,7 @@ typing_extensions==4.7.1
 unicornhathd==0.0.4
 urllib3==1.26.5
 v4l2-python3==0.3.2
+waitress==2.1.2
 webencodings==0.5.1
 Werkzeug==1.0.1
 wrapt==1.12.1
